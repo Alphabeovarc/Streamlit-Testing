@@ -11,6 +11,6 @@ st.file_uploader('upload', 'csv', False, 'uploaded_files')
 st.write(st.session_state.uploaded_files)
 
 
-df = pd.read_csv(st.session_state.uploaded_files, on_bad_line = 'skip')
+df = pd.read_csv(st.session_state.uploaded_files, on_bad_lines = 'skip')
 st.dataframe(df)
   
