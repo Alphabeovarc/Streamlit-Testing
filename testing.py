@@ -17,4 +17,4 @@ for file in st.session_state.uploaded_files:
   df = pd.concat([df,_], ignore_index = True)
 
 st.dataframe(df)
-st.write(df.memory_usage())
+st.write(f'{df.memory_usage(deep=True).sum()/1000/1000} MB')
