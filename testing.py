@@ -11,11 +11,10 @@ st.file_uploader('upload', 'csv', True, 'uploaded_files')
 
 #st.write(st.session_state.uploaded_files)
 
-df = []
+df = pd.DataFrame()
 for file in st.session_state.uploaded_files:
-  st.write(file)
-  df.append(pd.read_csv(st.session_state.uploaded_files, on_bad_lines = 'skip'))
-#df = pd.concat(df, ignore_index = True)
+  _ = pd.read_csv(file, on_bad_lines = 'skip'))
+  df = pd.concat([df,_], ignore_index = True)
 
-#st.dataframe(df)
-#st.write(df.memory_usage())
+st.dataframe(df)
+st.write(df.memory_usage())
