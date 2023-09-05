@@ -14,7 +14,8 @@ st.file_uploader('upload', 'csv', True, 'uploaded_files')
 dtypes = {
   'MessageCode': 'category',
   'MessageSeverity': 'category',
-  'AgvNumber': 'uint8'
+  'AgvNumber': 'uint8',
+  'AgvType': 'uint8',
 }
 
 df = pd.DataFrame()
