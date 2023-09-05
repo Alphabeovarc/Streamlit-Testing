@@ -13,7 +13,7 @@ st.file_uploader('upload', 'csv', True, 'uploaded_files')
 
 df = pd.DataFrame()
 for file in st.session_state.uploaded_files:
-  _ = pd.read_csv(file, on_bad_lines = 'skip'))
+  _ = pd.read_csv(file, on_bad_lines = 'skip')
   df = pd.concat([df,_], ignore_index = True)
 
 st.dataframe(df)
