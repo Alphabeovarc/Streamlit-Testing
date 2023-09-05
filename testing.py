@@ -7,7 +7,7 @@ df = pd.DataFrame()
 
 st.write('testing app')
 st.write('syncing')
-st.file_uploader('upload', 'csv', False, 'uploaded_files')
+st.file_uploader('upload', 'csv', False, 'uploaded_files', accept_multiple_files = True)
 
 st.write(st.session_state.uploaded_files)
 
