@@ -14,4 +14,4 @@ st.write(st.session_state.uploaded_files)
 
 df = pd.read_csv(st.session_state.uploaded_files, on_bad_lines = 'skip')
 st.dataframe(df)
-  
+st.write(df.memory_usage())
