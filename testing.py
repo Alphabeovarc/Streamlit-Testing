@@ -16,6 +16,20 @@ dtypes = {
   'MessageSeverity': 'category',
   'AgvNumber': 'uint8',
   'AgvType': 'uint8',
+  'SequenceNumber': 'uint32',
+  'CurrentNodeNumber': 'uint16',
+  'NextNodeNumber': 'uint16',
+  'TaskTable': 'uint16',
+  'TableCommand': 'uint16',
+  'RunStateStatus': 'category',
+  'DistanceValue': 'int16',
+  'BatteryCharge': 'uint8',
+  'Mode': 'category',
+  'ErrorCode': 'uint16',
+  'ErrorDescription': 'category',
+  'AgvZone': 'uint8',
+  'CurrentJobID': 'category',
+  'CurrentPlantID': 'category',
 }
 
 df = pd.DataFrame()
